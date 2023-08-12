@@ -2,12 +2,17 @@ import React, { useEffect, useState }  from 'react'
 import RecipeItem from './RecipeItem'
 import axios from 'axios';
 
-const token = localStorage.getItem('token');
+// const token = localStorage.getItem('token');
+// console.log(localStorage)
+// const headers = {
+//   Authorization: `Bearer ${token}`,
+// };
+function Recipes() {
+  const token = localStorage.getItem('token');
 console.log(localStorage)
 const headers = {
   Authorization: `Bearer ${token}`,
 };
-function Recipes() {
     const [recipes, setRecipes] = useState([]);
     useEffect(() => {
       axios.get('https://whip-woolen-ketch.glitch.me/recipe/detail',{headers})
