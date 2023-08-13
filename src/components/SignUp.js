@@ -32,7 +32,8 @@ function SignUp() {
             window.history.replaceState(null, '', '/recipe');
               navigate('/recipe');
             }, 1000) 
-      } catch (error) {
+        }
+      }catch (error) {
         toast( error.response.data);
       }
     };
