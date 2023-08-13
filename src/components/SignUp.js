@@ -29,6 +29,7 @@ function SignUp() {
         if (response.status === 200) {
           toast("Registered Successfully");
             setTimeout(() => {
+            window.history.replaceState(null, '', '/recipe');
               navigate('/recipe');
             }, 1000); 
       } catch (error) {
