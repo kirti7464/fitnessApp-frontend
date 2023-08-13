@@ -25,11 +25,12 @@ function SignUp() {
         const response = await axios.post('https://whip-woolen-ketch.glitch.me/user/create', formData);
         const token = response.data.token;
         localStorage.setItem('token', token);
-        console.log('User signed up:', response.data);
-        toast("Login Succesfully!");
+          // console.log('User signed up:', response.data);
         if (response.status === 200) {
-            navigate('/recipe');
-        }
+          toast("Registered Successfully");
+            setTimeout(() => {
+              navigate('/recipe');
+            }, 1000); 
       } catch (error) {
         toast( error.response.data);
       }
