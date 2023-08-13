@@ -36,8 +36,8 @@ const NavBar = () => {
                   
             </ul>
             {localStorage.getItem("token") ? (
-              <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-success my-2 my-sm-0" onClick={handleLogout } type="submit">Logout</button>
+              <form className="form-inline my-2 my-lg-0">
+                <button className="btn btn-outline-success my-2 my-sm-0" onClick={handleLogout } type="submit">Logout</button>
               </form>
                 ) : null}
           </div>
