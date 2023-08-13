@@ -28,7 +28,8 @@ const handleSubmit = async (e) => {
     if (response.status === 200) {
         toast("Logged In Succesfully")
          setTimeout(() => {
-          navigate('/recipe');
+             window.history.replaceState(null, '', '/recipe');
+          navigate('/recipe');  
         }, 1000);
     }
   } catch (error) {
