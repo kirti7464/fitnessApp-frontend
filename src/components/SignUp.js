@@ -31,7 +31,7 @@ function SignUp() {
             setTimeout(() => {
             window.history.replaceState(null, '', '/recipe');
               navigate('/recipe');
-            }, 1000); 
+            }, 1000) 
       } catch (error) {
         toast( error.response.data);
       }
