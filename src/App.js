@@ -12,9 +12,9 @@ const App=()=> {
     <div>
       <Router>
         <NavBar /> 
-        {/* <SignUp/> */}
+       
         <Routes> 
-          {/* <Route exact path="/" element={<Register key="register" />} /> */}
+         
           <Route exact path="/recipe" element={<Recipes key="home" />} />
           <Route exact path="/about" element={<About key="about" />} />
           <Route exact path="/login" element={<Login key="login" />} />
