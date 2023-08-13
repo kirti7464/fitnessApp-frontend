@@ -5,7 +5,7 @@ const NavBar = () => {
   const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem('token');
-    window.history.replaceState(null, '', '/recipe');
+    window.history.replaceState(null, '', '/');
     navigate('/')
   };
   return (
