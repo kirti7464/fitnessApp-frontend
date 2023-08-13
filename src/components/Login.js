@@ -27,7 +27,9 @@ const handleSubmit = async (e) => {
     console.log('Logged In :', response.data);
     if (response.status === 200) {
         toast("Logged In Succesfully")
-        navigate('/recipe');
+         setTimeout(() => {
+          navigate('/recipe');
+        }, 1000);
     }
   } catch (error) {
     toast(error.response.data);
